@@ -28,15 +28,14 @@ strings = '731671765313306249192251196744265747423553491949349698352031277450632
 71636269561882670428252483600823257530420752963450'
 
 def math(num):
-    p = [1]
+    p = 1
     for i in range(len(strings)-3):
         number = strings[i:i+num]
         pro = 1
         for x in number:
             pro *= int(x)
-        if pro > p[0]:
-            del p[0]
-            p.append(pro)
+        if pro > p:
+            p = pro
     print(p)
 
 math(13)
